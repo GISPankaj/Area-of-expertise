@@ -1,0 +1,249 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #a2b4b4;
+    color: white;
+}
+
+#header {
+    width: 100%;
+    height: 50%;
+    background-image: url(images/LinkedIn_background.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    padding: 10px 10%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 140px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    text-decoration: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: white;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/*--------------------------------------------------Content--------------------------------*/
+
+.container {
+    padding: 10px 10%;
+}
+
+header {
+    width: 100%;
+    height: 50%; /* Changed percentage to viewport height */
+    background-image: url(images/LinkedIn_background.png);
+    background-size: cover;
+    background-position: center;
+}
+
+header h1 {
+    margin: 0;
+    color: white;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul {
+    display: inline;
+    margin-right: 20px;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+article {
+    position: relative;
+    width: 100%;
+    margin-bottom: 40px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: normal;
+}
+
+article img {
+    width: 40%;
+    height: auto; /* Changed percentage to auto */
+    display: block;
+    margin: 0 auto;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.description {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.kit {
+    margin-left: 15%;
+    margin-right: 15%;
+    color: #a20a3b;
+}
+
+.table-box {
+    margin: 50px auto;
+}
+
+.table-row {
+    display: table;
+    width: 80%;
+    margin: 10px auto;
+    font-family: sans-serif;
+    background: rgb(216, 216, 216);
+    padding: 12px 0;
+    color: #555;
+    font-size: 13px;
+    box-shadow: 0 1px 4px 0px rgba(0, 0, 50, 0.3);
+}
+
+.table-head {
+    background: #8665f7;
+    box-shadow: none;
+    color: #fff;
+    font-weight: 600;
+}
+
+.table-head .table-cell {
+    border-right: none;
+}
+
+.table-cell {
+    display: table-cell;
+    width: 20%;
+    text-align: center;
+    padding: 4px 0;
+    border-right: 1px solid #d6d4d4;
+    vertical-align: middle;
+    color: #555;
+    font-weight: bold;
+}
+
+.first-cell {
+    text-align: left;
+    padding-left: 10px;
+}
+
+.last-cell {
+    border-right: none;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: #a20a3b;
+    font-weight: bold;
+}
+
+/*-----------------------------------------------CSS for Small screens---------------------*/
+
+nav .fa {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    #header {
+        background-image: url(images/LinkedIn_background.png);
+    }
+
+    .header-text {
+        margin-top: 100%;
+        font-size: 15px;
+    }
+
+    .header-text h1 {
+        font-size: 35px;
+    }
+
+    nav .fa {
+        display: block;
+        font-size: 20px;
+    }
+
+    nav ul {
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -240px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .fa {
+        position: absolute;
+        top: 25px;
+        left: 15px;
+        cursor: pointer;
+    }
+
+    article img {
+        width: 90%;
+        height: auto; /* Changed percentage to auto */
+        display: block;
+        margin: 0 auto;
+    }
+
+    .table-row {
+        font-size: 11px;
+    }
+}
